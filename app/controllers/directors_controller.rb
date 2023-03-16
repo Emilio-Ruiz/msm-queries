@@ -1,6 +1,7 @@
 class DirectorsController < ApplicationController
   def index 
 
-    render({:template => "directors_template/index.html.erb"})
+    render({:template => "director_templates/index.html.erb"})
   end 
 end 
+

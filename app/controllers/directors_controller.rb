@@ -4,12 +4,14 @@ class DirectorsController < ApplicationController
     @list_of_directors = Director.all 
 
     render({:template => "director_templates/index.html.erb"})
-  end 
+  end
+
   def wisest 
     @oldest = Director.where.not({:dob=>nil}).order({:dob=>:asc}).at(0)
 
     render({:template => "director_templates/eldest.html.erb"})
   end
+
   def director_details 
     # params looks like {"an_id"=>"42"}
 
@@ -19,5 +21,11 @@ class DirectorsController < ApplicationController
     @filmography = Movie.where({:director_id => the_id})
 
     render({:template => "director_templates/show.html.erb"})
+  end
+
+  def youngest 
+    @youngest =  Director.order({:dob => :desc }).at(0)
+
+    render({:template => "director_templates/youngest.html.erb"})
   end
 end

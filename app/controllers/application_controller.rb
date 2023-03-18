@@ -3,3 +3,4 @@ class ApplicationController < ActionController::Base
     render({ :template => "misc_templates/home"})
   end
 end
+

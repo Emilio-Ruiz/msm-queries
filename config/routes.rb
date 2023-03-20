@@ -12,5 +12,9 @@ Rails.application.routes.draw do
 
   get("/", { :controller => "application", :action => "homepage" })
 
+  get("/movies/:movie_id", { :controller => "movies", :action => "show"})
+
+  
+
   
 end

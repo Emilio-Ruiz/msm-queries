@@ -11,6 +11,11 @@ class DirectorsController < ApplicationController
 
     render({:template => "director_templates/eldest.html.erb"})
   end
+  #def movies 
+  #  @list_of_movies = Director.where#({:id => the_id})
+   # render({:template => "director_templates/movies.html.#erb"})
+    
+  #end
 
   def director_details 
     # params looks like {"an_id"=>"42"}
@@ -28,4 +33,5 @@ class DirectorsController < ApplicationController
 
     render({:template => "director_templates/youngest.html.erb"})
   end
+    
 end

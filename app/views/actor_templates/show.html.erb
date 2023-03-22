@@ -1,8 +1,11 @@
 
 
 <%= @the_actor.name %>
-<%= @the_actor.dob%></td>
-<%= @the_actor.bio%></td>
+<%= @the_actor.dob%>
+<%= @the_actor.bio%>
+
+
+
 
 
 <table border="1">
@@ -13,6 +16,10 @@
       <a href="/movies/<%= a_thing.movie_id%>">
         Show details
       </a>
+    </td>
+    <td>
+    <%= Movie.where({:id => a_thing.movie_id}).at(0).title%> 
+    
     </td>
   </tr>
 <% end %>

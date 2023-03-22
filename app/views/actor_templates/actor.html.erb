@@ -1,3 +1,5 @@
+<a href="/actors/"> Show details </a>
+
 
 
 <table border="1">
@@ -7,7 +9,7 @@
     <td><%= a_thing.title %></td>
         <td><img src="http://robohash.org/<%= a_thing.image %>"></td>
 
-    <td><%= name %></td>
+    <td><%= a_thing.name %></td>
     <td>
       <a href="/movies/<%= a_thing.id%>">
         Show details
@@ -15,5 +17,5 @@
     </td>
   </tr>
 <% end %>
-    
+
 </table>

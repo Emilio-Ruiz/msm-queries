@@ -1,5 +1,19 @@
-<h1> <%= @the_actor.name %> details </h1>
 
- <td>
 
+<%= @the_actor.name %>
+<%= @the_actor.dob%></td>
+<%= @the_actor.bio%></td>
+
+
+<table border="1">
+<% @characters.each do |a_thing| %>
+  <tr>
+    <td><%= a_thing.name %></td>
+    <td>
+      <a href="/movies/<%= a_thing.movie_id%>">
+        Show details
+      </a>
     </td>
+  </tr>
+<% end %>
+</table>

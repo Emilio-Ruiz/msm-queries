@@ -1,7 +1,9 @@
-<a href="/actors/:/something">Show Details</a>
+
 <% @actors.each do |a_thing| %>
+<br>
 <%= a_thing.name %>
 <%= a_thing.bio %>
-<% end %>
 
+<a href="/actors/<%=a_thing.id%>">Show details</a>
+<% end %>
 
